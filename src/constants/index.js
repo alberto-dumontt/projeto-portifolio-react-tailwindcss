@@ -12,8 +12,8 @@ export const EXPERIENCES = [
     year: "10/2025 - Present",
     role: "Mid-level Developer",
     company: "Imunisys",
-    description: ``,
-    technologies: [],
+    description: `Building and developing solutions in the cybersecurity domain, focusing on scalable, secure, and maintainable architecture. Designing UI/UX prototypes in Figma and implementing user-centric interfaces using Next.js, React, and Tailwind CSS. Developing backend services with Java and Spring Boot, making key architectural decisions for a robust multi-tenant system. Implementing multitenancy architecture and integrating MFA technologies to strengthen authentication and security layers. Managing CI/CD pipelines and version control workflows using GitLab to optimize deployment and development efficiency. Containerizing applications with Docker and orchestrating environments with Kubernetes for high scalability and reliability. Contributing to system architecture, technical specifications, and best practices to ensure high-quality, consistent, and maintainable solutions.`,
+    technologies: ["Java", "Spring Boot", "Multitenancy", "MFA Integrations", "Next.js", "React", "Tailwind CSS", "Figma", "PostgreSQL", "Docker", "Kubernetes", "GitLab", "CI/CD", "Kanban"],
   },
   {
     year: "03/2024 - 10/2025",
@@ -68,7 +68,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Cabreúva, São Paulo, Brazil ",
-  phoneNo: "+55 (11) 970578775 ",
+  address: "São Paulo, Brazil ",
+  phoneNo: "+55 (11) 97057-8775 ",
   email: "albertodumonttsf@outlook.com",
 };
