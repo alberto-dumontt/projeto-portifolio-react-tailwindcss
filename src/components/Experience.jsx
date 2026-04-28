@@ -1,52 +1,57 @@
-import { EXPERIENCES } from "../constants";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 
 const Experience = () => {
-  return (
-    <div className="border-b border-neutral-900 pb-4">
-        <motion.h1
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.5 }}
-            className="my-20 text-center text-4xl"
-        >
-            Experience
-        </motion.h1>
-        <div>
-            {EXPERIENCES.map((experience, index) => (
-                <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
-                    <motion.div
-                        whileInView={{ opacity: 1, x: 0 }}
-                        initial={{ opacity: 0, x: -100 }}
-                        transition={{ duration: 1 }}
-                        className="w-full lg:w-1/4"
-                    >
-                        <p className="mb-2 text-sm text-neutral-400">{experience.year}</p>
-                    </motion.div>
-                    <motion.div 
-                        whileInView={{ opacity: 1, x: 0 }}
-                        initial={{ opacity: 0, x: 100 }}
-                        transition={{ duration: 1 }}
-                        className="w-full max-w-xl lg:w-3/4"
-                    >
-                        <h6 className="mb-2 font-semibold">
-                            {experience.role} -{" "}
-                            <span className="text-sm text-purple-100">
-                                {experience.company}
-                            </span>
-                        </h6>
-                        <p className="mb-4 text-neutral-400">{experience.description}</p>
-                        <div className="flex flex-wrap">
-                            {experience.technologies.map((tech, index) => (
-                                <span key={index} className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800">{tech}</span>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div>
-            ))}
-        </div>
-    </div>
-  )
-}
+  const { t } = useTranslation();
+  const items = t("experience.items", { returnObjects: true });
 
-export default Experience
+  return (
+    <section id="experience" className="py-24 border-b border-zinc-800/50">
+      <SectionHeader index={3} title={t("experience.title")} />
+
+      <div className="relative">
+        <div className="absolute left-0 top-2 bottom-2 w-px bg-zinc-800" />
+
+        {items.map((item, index) => (
+          <motion.div
+            key={index}
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.04 }}
+            viewport={{ once: true }}
+            className="relative pl-8 pb-12 last:pb-0"
+          >
+            <div className="absolute left-[-3px] top-1.5 w-1.5 h-1.5 rounded-full bg-zinc-700 ring-4 ring-zinc-950" />
+
+            <div className="flex flex-col lg:flex-row lg:items-start gap-2 lg:gap-8">
+              <span className="font-mono text-xs text-zinc-600 lg:w-40 flex-shrink-0 pt-0.5">
+                {item.year}
+              </span>
+
+              <div className="flex-1">
+                <h3 className="font-medium text-zinc-200 text-sm">
+                  {item.role}
+                  <span className="text-zinc-600 font-normal"> — {item.company}</span>
+                </h3>
+                <p className="mt-2 text-zinc-600 text-sm leading-relaxed font-light">{item.description}</p>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {item.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="font-mono text-[11px] px-2 py-0.5 rounded bg-zinc-900 text-zinc-500 border border-zinc-800"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Experience;

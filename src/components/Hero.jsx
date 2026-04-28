@@ -1,89 +1,96 @@
-import { HERO_CONTENT } from '../constants';
-import profilePic from "../assets/albertoDumontt.jpg";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-
-const container = (delay) => ({ 
-    hidden: { 
-        x: -100, 
-        opacity: 0 
-    },
-    visible: { 
-        x: 0,
-        opacity: 1,
-        transition: { 
-            duration: 0.5,
-            delay: delay 
-        }
-    },
-});
+import profilePic from "../assets/albertoDumontt.jpg";
+import { CV_LINKS } from "../constants";
 
 const Hero = () => {
-  return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
-        <div className="flex flex-wrap">
-            <div className="w-full lg:w-1/2">
-                <div className="flex flex-col item-center lg:items-start">
-                    <motion.h1 
-                        variants={container(0)}
-                        initial="hidden"
-                        animate="visible"
-                        className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
-                            Alberto Dumontt
-                    </motion.h1>
-                    <motion.span
-                        variants={container(0.5)}
-                        initial="hidden"
-                        animate="visible"
-                        className="bg-gradient-to-r from-pink-200 visa-slate-300 to-purple-300 bg-clip-text text-3xl tracking-tight text-transparent">
-                            Software Developer
-                    </motion.span>
-                    <motion.p
-                        variants={container(1)}
-                        initial="hidden"
-                        animate="visible"
-                        className="my-2 max-w-xl py-6 font-light tracking-tight">
-                            {HERO_CONTENT}
-                    </motion.p>
-                    <div className="mb-8">
-                        <motion.a
-                            variants={container(1.5)}
-                            initial="hidden"
-                            animate="visible"
-                            href="https://docs.google.com/document/d/1Cm8YaSKRHYX-6OfM9SfDkXyc-TMcws-PGP-G0NHAphQ/edit?usp=sharing"
-                            target="_blank" 
-                            rel="noreferrer"
-                            className="rounded-2xl border-2 border-neutral-800 p-4 mt-4 mr-4 inline-block bg-gradient-to-r from-pink-200 via-slate-300 to-purple-300 bg-clip-text text-transparent hover:bg-gradient-to-r hover:from-pink-200 hover:via-slate-300 hover:to-purple-300 hover:text-white">
-                                CV (en)
-                        </motion.a>
-                        <motion.a
-                            variants={container(1.5)}
-                            initial="hidden"
-                            animate="visible"
-                            href="https://docs.google.com/document/d/1msTjLLRqI2u9M-mA9oRXHlHWEukm_xJaw8BIrJVUyoo/edit?usp=sharing"
-                            target="_blank" 
-                            rel="noreferrer"
-                            className="rounded-2xl border-2 border-neutral-800 p-4 mt-4 inline-block bg-gradient-to-r from-pink-200 via-slate-300 to-purple-300 bg-clip-text text-transparent hover:bg-gradient-to-r hover:from-pink-200 hover:via-slate-300 hover:to-purple-300 hover:text-white">
-                                CV (pt-br)
-                        </motion.a>
-                    </div>
-                </div>
-            </div>
-            <div className="w-full lg:w-1/2 lg:p-8">
-                <div className="flex justify-center">
-                    <motion.img
-                        initial={{ x: 100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 1, delay: 1.2 }}
-                        src={profilePic} width={500}
-                        className="rounded-2xl"
-                        height={500}
-                        alt="Alberto Dumontt"
-                    />
-                </div>
-            </div>
-        </div>
-    </div>
-  )
-}
+  const { t } = useTranslation();
 
-export default Hero
+  return (
+    <section className="min-h-[90vh] flex items-center py-16 border-b border-zinc-800/50">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-16 w-full">
+        <div className="flex-1 flex flex-col gap-6">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-mono text-indigo-400 text-xs tracking-widest uppercase"
+          >
+            {t("hero.greeting")}
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-5xl lg:text-6xl font-semibold text-zinc-100 tracking-tight leading-none"
+          >
+            Alberto Dumontt
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="flex items-center gap-3"
+          >
+            <span className="w-5 h-px bg-zinc-700" />
+            <span className="font-mono text-zinc-500 text-sm tracking-wide">
+              {t("hero.role")}
+            </span>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="text-zinc-500 text-sm leading-relaxed max-w-lg font-light"
+          >
+            {t("hero.description")}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.65 }}
+            className="flex flex-wrap gap-3 pt-2"
+          >
+            <a
+              href={CV_LINKS.en}
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-xs px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded transition-colors"
+            >
+              {t("hero.cv_en")}
+            </a>
+            <a
+              href={CV_LINKS.ptBr}
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-xs px-5 py-2.5 border border-zinc-700 hover:border-zinc-500 text-zinc-400 hover:text-zinc-200 rounded transition-colors"
+            >
+              {t("hero.cv_pt")}
+            </a>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex-shrink-0"
+        >
+          <img
+            src={profilePic}
+            alt="Alberto Dumontt"
+            width={280}
+            height={280}
+            className="rounded-lg object-cover border border-zinc-800 grayscale-[20%]"
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "about": "About",
+    "technologies": "Technologies",
+    "experience": "Experience",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "recommendations": "Recommendations",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Software Engineer",
+    "description": "Software Engineer specializing in Java, Spring Boot, and software architecture. I design and build scalable, cloud-native backend systems with a strong focus on DevOps practices — CI/CD, Docker, Kubernetes — and observability with Datadog and Grafana.",
+    "cv_en": "CV (EN)",
+    "cv_pt": "CV (PT-BR)"
+  },
+  "about": {
+    "title": "About",
+    "highlight": "Me",
+    "text": "I am a Software Engineer with a degree in Computer Science, specializing in backend development, software architecture, and cloud-native solutions. My core expertise is in Java and Spring Boot, where I focus on designing and building scalable, secure, and maintainable systems — including multi-tenant architectures with robust authentication layers.\n\nI work daily with cloud platforms such as AWS and Azure, and apply DevOps practices end-to-end: designing CI/CD pipelines with GitLab and GitHub Actions, containerizing applications with Docker, and orchestrating environments with Kubernetes. I also care deeply about system reliability, leveraging observability tools like Datadog and Grafana to monitor metrics, logs and traces in production. While backend and architecture are my primary focus, I am comfortable across the full stack — from API design to frontend interfaces with React and Next.js.\n\nOutside of work, I am someone who values balance between body and mind. I am a regular at the gym and I love running street races — there is something about crossing a finish line that keeps me grounded. I am a proud São Paulo FC supporter and never miss a match. I also enjoy unwinding with video games, which sharpen my focus and strategic thinking in ways I carry into my work. Most importantly, I cherish the time I spend with my family — they are my biggest motivation to keep growing, both as an engineer and as a person."
+  },
+  "technologies": {
+    "title": "Technologies"
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "year": "10/2025 - Present",
+        "role": "Mid-level Developer",
+        "company": "Imunisys",
+        "description": "Designing UI/UX prototypes in Figma and implementing user-centric interfaces using Next.js, React, and Tailwind CSS. Developing backend services with Java and Spring Boot, making key architectural decisions for a robust multi-tenant system. Implementing CI/CD pipelines with GitLab and GitHub Actions, and version control workflows to optimize deployment and development efficiency. Containerizing applications using Docker and orchestrating with Kubernetes for scalable and reliable environments. Monitoring and ensuring system reliability through observability practices with Datadog and Grafana, including metrics, logs and tracing. Collaborating on system architecture, technical specifications, and best practices to ensure high-quality, maintainable solutions.",
+        "technologies": ["Java", "Spring Boot", "PostgreSQL", "Next.js", "React", "Tailwind CSS", "Docker", "Kubernetes", "GitLab", "GitHub Actions", "Datadog", "Grafana", "CI/CD", "Kanban"]
+      },
+      {
+        "year": "03/2024 - 10/2025",
+        "role": "Junior Developer",
+        "company": "E-Trust",
+        "description": "Responsible for maintaining and developing new features in the Horacius identity management system, focused on corporate identity control and user experience improvement. Defined technical and functional specifications for issues, ensuring clear requirements and alignment with project goals, while acting as a technical reference throughout the development process. Implemented agile methodologies using the Kanban model with JIRA, optimizing workflow and boosting team efficiency. Conducted testing, code reviews, and continuous improvements to ensure high-quality, maintainable code. Played an active role in identifying and resolving critical bugs, contributing to system stability and reliability. Developed user-centric solutions that deliver real value to end-user experience and contributed to process documentation and best practices, fostering a collaborative and growth-oriented environment. Collaborated on Java and Spring Framework modules, reviewing and improving backend services to align with system standards and performance requirements.",
+        "technologies": ["PHP", "Laravel", "Vue.js", "jQuery", "JavaScript", "Java", "Spring Framework", "MySQL", "GitLab", "SVN", "AWS (IAM)", "JIRA"]
+      },
+      {
+        "year": "09/2023 - 03/2024",
+        "role": "AI & IT Infrastructure",
+        "company": "Cartório de Registro de Imóveis de Cabreúva",
+        "description": "Worked as a Registry Assistant with a strong focus on IT infrastructure, automation, and data protection, actively contributing to the office's technological modernization. Created and managed Linux servers, implementing and maintaining essential systems for operational continuity. Configured and maintained AWS services including Bedrock, IAM, S3, and EC2, and used Google Cloud Platform to securely store sensitive registry data. Developed Python scripts to automate internal processes and integrate third-party APIs, enhancing operational efficiency and data security. Played a key role in implementing LGPD (Brazilian GDPR), contributing to the creation and documentation of data compliance policies. Gained hands-on experience with AI platforms such as OpenAI, Gemini, and Claude, applying prompt engineering and AI API integration to optimize data management solutions.",
+        "technologies": ["Linux", "Python", "AWS (Bedrock, IAM, S3, EC2)", "Google Cloud", "OpenAI", "Gemini", "Claude", "LGPD"]
+      },
+      {
+        "year": "03/2023 - 09/2023",
+        "role": "IT Support Technician",
+        "company": "Open Internet",
+        "description": "Worked in infrastructure and technical support, ensuring the stability and performance of the company's IT systems and equipment. Implemented and maintained monitoring systems using Zabbix 6, ensuring system integrity and performance. Created Bash and Batch scripts to automate routine tasks, improving operational efficiency and reducing manual errors. Performed hardware maintenance, diagnosing and repairing computers and peripherals, and handled software installation and configuration. Managed printer installation and network integration, ensuring consistent performance in corporate environments. Provided remote access support to internal and external users, offering fast and reliable troubleshooting. Administered both Windows environments and Linux servers, along with MySQL and PostgreSQL database management.",
+        "technologies": ["Zabbix 6", "Bash", "Batch", "Windows", "Linux", "MySQL", "PostgreSQL", "Networking"]
+      },
+      {
+        "year": "12/2022 - 03/2023",
+        "role": "Intern Software Developer",
+        "company": "Open Dev",
+        "description": "Participated in software development projects focused on delivering innovative solutions to optimize both internal processes and customer interactions. Developed REST APIs using PHP/Laravel, enabling system integration and process automation, which led to notable operational improvements. Integrated a WhatsApp messaging API and developed a chatbot, expanding customer service channels and enhancing user experience. Worked with MySQL and PostgreSQL databases, performing data manipulation and optimization to ensure fast and reliable information access. Created interactive reports using Grafana and Looker Studio, providing valuable data insights and supporting strategic decision-making.",
+        "technologies": ["PHP", "Laravel", "REST APIs", "MySQL", "PostgreSQL", "WhatsApp API", "Grafana", "Looker Studio"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "view_code": "View on GitHub →",
+    "view_site": "Visit site →",
+    "items": [
+      {
+        "title": "DevSpecAI",
+        "description": "An AI-driven project specification generator. Built as a fullstack application with a backend focus on Spring Boot. Integrates with Cohere AI to generate tailored project ideas based on user profile, technologies, and career goals. Dockerized and deployed on Render.",
+        "technologies": ["Java", "Spring Boot", "React.js", "Docker", "Cohere AI", "Render"]
+      },
+      {
+        "title": "Merlin — WhatsApp Inteligente",
+        "description": "Intelligent WhatsApp automation platform that enables AI-powered messaging workflows, automated customer interactions and smart response handling. Designed for businesses looking to scale their communication through WhatsApp.",
+        "technologies": ["Next.js", "React", "Tailwind CSS", "Node.js", "WhatsApp API", "AI"]
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "view_credential": "View Credential →",
+    "items": [
+      {
+        "name": "Claude Code in Action",
+        "issuer": "Anthropic",
+        "date": "May 2026",
+        "credentialUrl": "#"
+      },
+      {
+        "name": "Backend Engineer Learning Path",
+        "issuer": "Datadog",
+        "date": "Apr 2026",
+        "credentialUrl": "#"
+      },
+      {
+        "name": "Getting Started with APM Metrics & Traces",
+        "issuer": "Datadog",
+        "date": "Apr 2026",
+        "credentialUrl": "#"
+      },
+      {
+        "name": "Getting Started with Log Explorer",
+        "issuer": "Datadog",
+        "date": "Apr 2026",
+        "credentialUrl": "#"
+      },
+      {
+        "name": "API Security Fundamentals & OWASP API Security TOP 10",
+        "issuer": "APIsec University",
+        "date": "Dec 2025",
+        "credentialUrl": "#"
+      },
+      {
+        "name": "Introduction to Microsoft Azure Cloud Native Experience",
+        "issuer": "Microsoft Azure",
+        "date": "Nov 2025",
+        "credentialUrl": "#"
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "linkedin": "View on LinkedIn",
+    "items": [
+      {
+        "name": "Ricardo Campos",
+        "role": "FullStack Developer | C# · Angular · SQL · Vue",
+        "date": "March 27, 2025 · Same team",
+        "text": "I worked with Alberto on large and challenging projects, and despite his young age, he always demonstrated great professional maturity. His technical knowledge is advanced, and he stands out not only for his ability to learn quickly, but also for his willingness to share knowledge with colleagues. A dedicated professional of great value to any team."
+      },
+      {
+        "name": "Adeilson Lima",
+        "role": "Software Engineer | Fullstack Developer (Node.js & React)",
+        "date": "March 20, 2025 · Same team",
+        "text": "I had the pleasure of working alongside Alberto, and his agility and dedication always stood out. Even as a junior professional, he demonstrates an impressive ability to learn fast and adapt to challenges. His competence and proactivity make a real difference in the team's day-to-day. He faces problems with energy and seeks solutions in an agile and efficient manner. Furthermore, he has an excellent collaborative spirit, always willing to help and contribute new ideas. Without a doubt, a promising talent — any team would be lucky to have him."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Feel free to reach out for opportunities or just a friendly chat.",
+    "address": "São Paulo, Brazil",
+    "phone": "+55 (11) 97057-8775",
+    "email": "albertodumonttsf@outlook.com"
+  }
+}
